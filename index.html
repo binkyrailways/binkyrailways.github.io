@@ -1,20 +1,43 @@
-
-<html> 
+<!doctype html>
+<html ng-app="binky"> 
 <head> 
 <title>Binky Railways</title> 
-<style>
-body { background-color: lightblue; }
-h1 { color: darkgreen; }
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+    <script src="app.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+ <style>
+body { background-color: #fffdcc; }
+h1, a, a:visited, a:hover { color: #eb4600; 680aff; }
 img { padding: 0 20px; }
 </style>
 </head> 
 <body> 
-<h1>Welcome to Binky Railways.</h1>
+<div class='container'>
+<h1><img src="train_128.png" /> Welcome to Binky Railways.</h1>
 <p>Model railroad software that runs the new Swiss railroad of the <a href="http://www.modelspoorgroepvenlo.nl">ModelspoorGroep Venlo</a>.</p>
-<p><img src="Binky1.png"/></p>
+
+<div ng-controller="ImgCarouselCtrl">
+   <carousel interval="myInterval">
+      <slide>
+        <img ng-src="Binky1.png" style="margin:auto;padding: 20px 0;">
+      </slide>
+      <slide>
+        <img ng-src="Binky2.png" style="margin:auto;padding: 20px 0;;">
+      </slide>
+      <slide>
+        <img ng-src="Binky3.png" style="margin:auto;padding: 20px 0;;">
+      </slide>
+    </carousel>
+</div>
+<h2>What can it do?</h2>
 <p>Binky Railways is easy to use, supports fully automatic driving and modular layouts.</p>
-<p><img src="Binky2.png"/></p>
-<p>At the moment Binky Railways is not available for public use.</p>
-<p><img src="Binky3.png"/></p>
+
+<h2>May I use it?</h2>
+<p>Binky Railways is open source (written in C#) available at <a href="https://github.com/binkyrailways/BinkyRailways"><b>GitHub</b></a>.
+</p>
+<p>You're free to use it for your personal fun. It is not allowed to used it commercially.</p>
+</div>
 </body> 
 </html>
